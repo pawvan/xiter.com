@@ -13,6 +13,7 @@ export const authOptions = {
     signIn: '/auth/signin',
   },
   // Additional configurations can be added here
+
 };
 
 export default NextAuth(authOptions);

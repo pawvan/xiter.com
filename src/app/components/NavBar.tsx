@@ -27,19 +27,21 @@ const Navbar = () => {
 
   return (
     <>
-      <Flex as="nav" align="center" justify="space-between" ml={24} mt={34} color="white">
+      <Flex as="nav" align="center" justify="space-between" ml={14} p={8}  color="white">
         <Box>
           <Heading size="lg" as="h4">
             <NextLink href="/" passHref>
-              Xiter.com
+              Xiter.IO
             </NextLink>
           </Heading>
         </Box>
-        <Flex>
+        <Flex align={'center'}  gap='3'mr={26} >
           <NextLink href="/courses" passHref>
-            <Link mr={4} fontSize="lg">Courses</Link>
+           <Heading size='md' as={'h4'}> 
+Courses
+           </Heading>
           </NextLink>
-          <Button colorScheme="teal" size="lg" onClick={onOpen}>
+          <Button colorScheme="teal" size="md" onClick={onOpen}>
             Login
           </Button>
         </Flex>
@@ -65,7 +67,7 @@ const Navbar = () => {
               onClick={onClose}
             />
             <Flex align={'center'} justify={'center'}>
-              <Heading color="white" size='xl'>
+              <Heading color="white" size='md'>
                 Login
               </Heading>
             </Flex>
