@@ -10,8 +10,7 @@ const theme = extendTheme({
   config: themeConfig,
   styles: {
     global: {
-      body: {
-        bg: 'lightgray', 
+      body: { 
       },
     },
   },
