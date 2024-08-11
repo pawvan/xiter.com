@@ -1,0 +1,1 @@
+https://github.com/login/oauth/authorize?client_id=%3B%27Ov23li55SICWvq3RDoYC%27&scope=read%3Auser%20user%3Aemail&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback%2Fgithub&state=mTAz0eqf2F-QWdH3e0t0QZzU9EcjKyanhYXB1hnIF8M
