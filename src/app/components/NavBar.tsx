@@ -1,21 +1,18 @@
-// app/components/Navbar.tsx
-'use client'; // Ensure this is at the top of the file
+'use client';
 
 import React from 'react';
 import {
   Box,
   Flex,
   Heading,
-  Link,
   Button,
   AlertDialog,
   AlertDialogBody,
-  AlertDialogHeader,
   AlertDialogContent,
   AlertDialogOverlay,
   useDisclosure,
   CloseButton,
-  Icon
+  Icon,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FaGithub } from 'react-icons/fa';
@@ -27,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Flex as="nav" align="center" justify="space-between" ml={14} p={8}  color="white">
+      <Flex as="nav" align="center" justify="space-between" ml={14} p={8} color="white">
         <Box>
           <Heading size="lg" as="h4">
             <NextLink href="/" passHref>
@@ -35,11 +32,11 @@ const Navbar = () => {
             </NextLink>
           </Heading>
         </Box>
-        <Flex align={'center'}  gap='3'mr={26} >
+        <Flex align="center" gap="3" mr={26}>
           <NextLink href="/courses" passHref>
-           <Heading size='md' as={'h4'}> 
-Courses
-           </Heading>
+            <Heading size="md" as="h4">
+              Courses
+            </Heading>
           </NextLink>
           <Button colorScheme="teal" size="md" onClick={onOpen}>
             Login
@@ -47,11 +44,7 @@ Courses
         </Flex>
       </Flex>
 
-      <AlertDialog
-        isOpen={isOpen}
-        leastDestructiveRef={cancelRef}
-        onClose={onClose}
-      >
+      <AlertDialog isOpen={isOpen} leastDestructiveRef={cancelRef} onClose={onClose}>
         <AlertDialogOverlay>
           <AlertDialogContent
             p={4}
@@ -60,14 +53,9 @@ Courses
             borderColor="blackAlpha.300"
             position="relative"
           >
-            <CloseButton
-              position="absolute"
-              right="8px"
-              top="8px"
-              onClick={onClose}
-            />
-            <Flex align={'center'} justify={'center'}>
-              <Heading color="white" size='md'>
+            <CloseButton position="absolute" right="8px" top="8px" onClick={onClose} />
+            <Flex align="center" justify="center">
+              <Heading color="white" size="md">
                 Login
               </Heading>
             </Flex>

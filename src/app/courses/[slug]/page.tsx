@@ -1,10 +1,8 @@
 import { Box, Container, Heading, Text, Button } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-
 const CourseDetail = () => {
   const router = useRouter();
-  const { slug } = router.query; // Use router.query to get the slug
-
+  const { slug } = router.query; 
   return (
     <Container maxW="container.xl" py={8}>
       <Box textAlign="center">
@@ -21,5 +19,4 @@ const CourseDetail = () => {
     </Container>
   );
 };
-
 export default CourseDetail;

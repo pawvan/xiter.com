@@ -1,6 +1,7 @@
 // app/api/auth/[...nextauth]/route.ts
 import NextAuth from 'next-auth';
 import GitHubProvider from 'next-auth/providers/github';
+
 export const authOptions = {
   providers: [
     GitHubProvider({
@@ -9,10 +10,12 @@ export const authOptions = {
     }),
   ],
   pages: {
-    signIn: '/auth/signin',
+    signIn: 'auth/signin', // Ensure the path is correctly referenced
   },
-  // Additional configurations can be added here
-
+  debug: process.env.NODE_ENV === 'development',
 };
 
-export default NextAuth(authOptions);
+let handler  = NextAuth(authOptions)
+export {
+  handler as GET , handler as POST
+}

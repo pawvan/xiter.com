@@ -1,13 +1,12 @@
 import React from 'react';
 import { Box, Flex, Heading, Text, Button, Container, VStack } from '@chakra-ui/react';
 import YouTube from 'react-youtube'; // Import the YouTube component
-
 const LandingPage = () => {
   const videoOptions = {
     height: '390',
     width: '640',
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
+
       autoplay: 0,
     },
   };
@@ -36,7 +35,7 @@ const LandingPage = () => {
             <Flex direction="column" flex={1} ml={{ base: 0, md: 12 }}>
               <Box mb={8}>
                 <YouTube
-                  videoId="69Tzh_0lHJ8" // The video ID extracted from the URL
+                  videoId="69Tzh_0lHJ8"
                   opts={videoOptions}
                 />
               </Box>
