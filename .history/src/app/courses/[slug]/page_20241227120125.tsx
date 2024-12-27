@@ -4,25 +4,7 @@ import { useRouter } from 'next/navigation'; // Use 'next/navigation' instead of
 
 const CourseDetail = () => {
   const router = useRouter();
-  
-  // Destructure the slug from router.query safely
-  const { slug } = router.query || {};
-
-  // If slug is not available, return a loading state or an error message
-  if (!slug) {
-    return (
-      <Container maxW="container.xl" py={8}>
-        <Box textAlign="center">
-          <Heading as="h1" size="2xl" mb={4}>
-            Loading Course Details...
-          </Heading>
-          <Text fontSize="lg">
-            Please wait while the course details are being fetched.
-          </Text>
-        </Box>
-      </Container>
-    );
-  }
+  const { slug } = router.query; // Slug will be accessed from the router query params
 
   return (
     <Container maxW="container.xl" py={8}>

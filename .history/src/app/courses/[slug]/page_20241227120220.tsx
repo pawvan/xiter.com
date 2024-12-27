@@ -1,4 +1,3 @@
-"use client"
 import { Box, Container, Heading, Text, Button } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation'; // Use 'next/navigation' instead of 'next/router'
 

@@ -1,3 +1,4 @@
+"use server"
 import React from 'react';
 import { Box, Flex, Heading, Text, Button, Container, Image, Card, CardBody, CardFooter, Divider } from '@chakra-ui/react';
 import Link from 'next/link';
